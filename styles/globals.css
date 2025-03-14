@@ -20,7 +20,7 @@
 }
 
 body {
-  background: var(--background);
+  background: #d2e8f4;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -37,10 +37,13 @@ h3 {
 p {
   @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
 }
-main {
+/* main {
   @apply min-h-screen flex flex-col justify-center items-center;
-}
+} */
 
+main {
+  @apply min-h-screen  justify-center items-center;
+}
 .card-button {
   border-radius: 10px;
   cursor: pointer;
@@ -73,21 +76,6 @@ main {
 @tailwind components;
 @tailwind utilities;
  
-h1 {
-  @apply font-semibold leading-tight text-4xl mt-0 mb-2;
-}
-h2 {
-  @apply font-semibold leading-tight text-3xl mt-0 mb-2;
-}
-h3 {
-  @apply font-semibold leading-tight text-2xl mt-0 mb-2;
-}
-p {
-  @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
-}
-main {
-  @apply min-h-screen flex flex-col justify-center items-center;
-}
  
 .nbr-inline-code {
   @apply text-pink-500 text-sm px-2 py-1 font-normal bg-gray-100 rounded break-words;
