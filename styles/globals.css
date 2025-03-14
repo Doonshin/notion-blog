@@ -24,3 +24,121 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+  @apply font-semibold leading-tight text-4xl mt-0 mb-2;
+}
+h2 {
+  @apply font-semibold leading-tight text-3xl mt-0 mb-2;
+}
+h3 {
+  @apply font-semibold leading-tight text-2xl mt-0 mb-2;
+}
+p {
+  @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
+}
+main {
+  @apply min-h-screen flex flex-col justify-center items-center;
+}
+
+.card-button {
+  border-radius: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: var(--font-family-primary);
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .15rem;
+  padding-top: 1.5rem !important; /* @TODO temp !!! */
+  padding: .75rem 1.5rem;
+  background-color: hsl(210, 5%, 41%);
+  border-color: hsl(210, 5%, 36%);
+  box-shadow: 0 5px 0 hsl(210, 5%, 20%);
+  bottom: -45px;
+  position: absolute;
+  right: 1.5rem;
+
+  /* transition の統一 */
+  transition: transform .2s, background-color .2s, border-color .2s;
+}
+
+.card-button:hover {
+  background-color: hsl(210, 5%, 51%);
+  border-color: hsl(210, 5%, 41%);
+  transform: translateY(.25rem);
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+h1 {
+  @apply font-semibold leading-tight text-4xl mt-0 mb-2;
+}
+h2 {
+  @apply font-semibold leading-tight text-3xl mt-0 mb-2;
+}
+h3 {
+  @apply font-semibold leading-tight text-2xl mt-0 mb-2;
+}
+p {
+  @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
+}
+main {
+  @apply min-h-screen flex flex-col justify-center items-center;
+}
+ 
+.nbr-inline-code {
+  @apply text-pink-500 text-sm px-2 py-1 font-normal bg-gray-100 rounded break-words;
+}
+.nbr-caption {
+  @apply text-inherit opacity-70;
+}
+.nbr-link {
+  @apply text-inherit no-underline border-b border-solid border-gray-700 opacity-70;
+}
+.nbr-block-quote {
+  @apply border-l-4 border-solid border-gray-700 px-4 py-2;
+}
+.nbr-block-code {
+  @apply text-sm;
+}
+/* Hide only scrollbar */
+.nbr-block-code pre::-webkit-scrollbar {
+  display: none !important;
+}
+.nbr-block-code .syntax-highlighter-pre {
+  @apply rounded-lg;
+  padding: 1.25rem !important;
+}
+.nbr-block-callout {
+  @apply bg-gray-100 pr-6 py-5 pl-4 rounded flex;
+}
+.nbr-block-callout .nbr-icon {
+  @apply min-w-min w-4 relative top-0.5;
+}
+.nbr-block-callout .nbr-callout {
+  @apply overflow-hidden w-full;
+  -webkit-margin-start: 8px;
+  margin-inline-start: 8px;
+}
+.nbr-block-ul {
+  @apply pl-4 list-disc;
+}
+.nbr-block-ol {
+  @apply pl-4 list-decimal;
+}
+/* Add margin-bottom for each block */
+.nbr-blocks > div {
+  @apply mb-4;
+}
+.nbr-block-table_of_contents {
+  @apply p-5 list-disc bg-gray-100 rounded;
+}
+.nbr-block-table_of_contents > div {
+  @apply my-1;
+}
+.nbr-block-table_of_contents a {
+  @apply underline text-gray-600;
+}
