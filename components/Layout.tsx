@@ -7,7 +7,7 @@ import { LayoutProps } from "@/types/types";
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="relative overflow-hidden">
-      <div className="flex flex-col items-center max-w-5xl w-full mx-auto">
+      <div className="flex flex-col items-center max-w-4xl w-full mx-auto">
         {/*  */}
         <Navbar />
         {/*  */}
