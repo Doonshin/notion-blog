@@ -7,15 +7,14 @@ const Card: FC<CardProps> = ({ page }) => {
   return (
     <a href={`/articles/${getText(page.properties.slug.rich_text)}`} className="block w-full">
       <div className="max-w-md rounded overflow-hidden shadow-lg w-full my-2 md:my-0 h-full flex flex-col">
-
         {/* Image */}
-        <div>
+        <div className="w-full h-[225px] overflow-hidden">
           <Image
-            className="w-full h-auto object-cover"
+            className="w-full h-full object-cover"
             src={getCover(page.cover)}
             alt=""
             width={400}
-            height={225}
+            height={100}
             quality={30}
           />
         </div>
