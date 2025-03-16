@@ -5,10 +5,10 @@ import { getCover, getDate, getMultiSelect, getText } from "../utils/property";
 
 const Card: FC<CardProps> = ({ page }) => {
   return (
-    <a href={`/articles/${getText(page.properties.slug.rich_text)}`} className="block w-full">
-      <div className="max-w-md rounded overflow-hidden shadow-lg w-full my-2 md:my-0 h-full flex flex-col">
+    <a href={`/articles/${getText(page.properties.slug.rich_text)}`} className="block w-full h-full">
+      <div className="max-w-md rounded overflow-hidden shadow-lg w-full my-2 md:my-0 h-full flex flex-col cursor-pointer hover:scale-105 transition-transform duration-200">
         {/* Image */}
-        <div className="w-full h-[225px] overflow-hidden">
+        <div className="w-full h-[150px] overflow-hidden">
           <Image
             className="w-full h-full object-cover"
             src={getCover(page.cover)}
@@ -21,9 +21,9 @@ const Card: FC<CardProps> = ({ page }) => {
 
         {/* Title & Date */}
         <div className="px-6 pt-4">
-          <h2 className="text-base font-medium mb-3">
+          <h3 className="text-base font-medium mb-3">
             {getText(page.properties.name.title)}
-          </h2>
+          </h3>
           <p className="text-gray-700 text-xs">
             {getDate(page.properties.published.date)}
           </p>

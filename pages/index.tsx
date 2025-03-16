@@ -53,7 +53,8 @@ const Home: NextPage<IndexProps> = ({ pages = [] }) => {
               <Link
                 key={index}
                 href={`/tags/${tag}`}
-                className="text-gray-700 bg-gray-200 px-2 py-1 rounded-md text-sm no-underline"
+                className="text-gray-700 bg-gray-200 px-2 py-1 rounded-md text-sm no-underline cursor-pointer hover:scale-105 transition-transform duration-200"
+                
               >
                 {`#${tag}`}
               </Link>
